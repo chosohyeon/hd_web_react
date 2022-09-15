@@ -1,8 +1,10 @@
 import './App.css';
 import Header from './component/Header.js';
 import MainVisual from './component/MainVisual.js';
-import MainContent from './component/MainContent.js'
-import Portfolio from './component/Portfolio.js'
+import MainContent from './component/MainContent.js';
+import Portfolio from './component/Portfolio.js';
+import Solution from './component/Solution.js';
+import Promotion from './component/Promotion.js';
 
 const App = () => {
 
@@ -13,6 +15,8 @@ const App = () => {
         <MainVisual/>
         <MainContent/>
         <Portfolio/>
+        <Solution/>
+        <Promotion/>
       </main>
     </div>
   );
