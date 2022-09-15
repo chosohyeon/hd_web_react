@@ -33,7 +33,7 @@ const MainVisual = () => {
                     SLIDE.map((slide, idx) => {
                         return (
                             <figure key={slide.id} className={`itm0${slide.id} ${(idx === IDX ? 'on' : '')}`}>
-                                <div div className="inner" >
+                                <div className="inner" >
                                     <p className='tit'>{slide.content}</p>
                                     <div className='des'>{slide.desc}</div>
                                     <a href={slide.link} target="_blank" className='cbtn'>
