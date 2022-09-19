@@ -1,24 +1,32 @@
 import './App.css';
-import Header from './component/Header.js';
-import MainVisual from './component/MainVisual.js';
-import MainContent from './component/MainContent.js';
-import Portfolio from './component/Portfolio.js';
-import Solution from './component/Solution.js';
-import Promotion from './component/Promotion.js';
+import Wrapper from './component/Wrapper'
+import Header from './component/Header'
+import MainVisual from './component/MainVisual';
+import MainContent from './component/MainContent';
+import Portfolio from './component/Portfolio';
+import Solution from './component/Solution';
+import Promotion from './component/Promotion';
+import News from './component/News';
+import Footer from './component/Footer';
+import Totop from './component/Totop';
+import Popup from './component/Popup';
 
 const App = () => {
-
   return (
-    <div className="Wrap">
+    <Wrapper>
       <Header />
       <main>
-        <MainVisual/>
-        <MainContent/>
-        <Portfolio/>
-        <Solution/>
-        <Promotion/>
+        <MainVisual />
+        <MainContent />
+        <Portfolio />
+        <Solution />
+        <Promotion />
+        <News />
       </main>
-    </div>
+      <Footer />
+      <Totop />
+      <Popup />
+    </Wrapper>
   );
 }
 
