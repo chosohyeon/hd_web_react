@@ -84,70 +84,7 @@
 }
 
 .Header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 9999;
-}
-
-.Header .hd_wrap {
-  position: relative;
-  background: rgba(0, 0, 0, 0.5);
-  color: var(--lc);
-  line-height: 100px;
-  transition: 0.5s;
-}
-
-.Header.on .hd_wrap {
-  background: var(--lc);
-  color: var(--dc);
-  line-height: 80px;
-}
-
-
-.Header .hd_wrap:hover {
-  background: var(--lc);
-  color: var(--dc);
-}
-
-.Header h1 {
-  position: absolute;
-  top: 0;
-  left: 70px;
-  font-size: 0;
-}
-
-.Header .hd_wrap h1 a {
-  display: inline-block;
-  font-size: 0;
-  width: 188px;
-  height: 22px;
-  background: url(../public/assets/images/logo_w.png);
-  vertical-align: middle;
-}
-
-.Header .hd_wrap:hover h1 a {
-  background: url(../public/assets/images/logo.png);
-}
-
-.Header.on .hd_wrap h1 a {
-  background: url(../public/assets/images/logo.png);
-}
-
-.Header .top_service {
-  position: absolute;
-  top: 0;
-  right: 70px;
-}
-
-.Gnb>ul {
-  display: flex;
-  gap: 40px;
-}
-
-.Header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
@@ -234,11 +171,11 @@
 }
 
 .Header .top_service strong:hover {
-  color: #008850;
+  color: var(--mc);
 }
 
 .Header .top_service strong.on {
-  color: #008850;
+  color: var(--mc);
 }
 
 .Header .top_service .lang {
@@ -258,7 +195,6 @@
 
 .Header .top_service .lang .lang_box {
   display: none;
-  /* display: block; */
   position: absolute;
   top: 70px;
   left: 50%;
@@ -355,6 +291,13 @@
   background-image: url(../public/assets/images/main_visual03.jpg);
 }
 
+.MainVisual figure .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .MainVisual .tit {
   font-size: 60px;
   font-weight: 700;
@@ -368,14 +311,6 @@
   font-weight: 300;
   margin: 0 0 30px 0;
   text-shadow: 0 0 1px var(--dc);
-  word-break: keep-all;
-}
-
-.MainVisual figure .inner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 /* 슬릭슬라이더 깜빡이는 문제 해결 방법 */
@@ -409,13 +344,6 @@
   font-size: 15px;
 }
 
-.MainVisual .slideTab li {
-  text-align: right;
-  margin: 0 0 20px 0;
-  font-size: 0;
-}
-
-
 .MainVisual .slideTab li::after {
   content: "";
   display: inline-block;
@@ -438,9 +366,9 @@
   background: transparent;
   border: none;
   color: var(--lc);
-  font-size: 50px;
+  font-size: 30px;
   padding: 30px;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
   line-height: 1;
   border-radius: 50%;
 }
@@ -462,11 +390,11 @@
   text-align: center;
 }
 
-.MainContent .inner>figure img {
+.MainContent figure img {
   transition: 0.5s;
 }
 
-.MainContent .inner>figure:hover img {
+.MainContent figure:hover img {
   transform: scale(1.2);
 }
 
@@ -596,9 +524,9 @@
 .Solution .box {
   position: absolute;
   top: 100px;
-  left: 55%;
-  margin: 0 0 0 -600px;
-  width: 330px;
+  left: 50%;
+  margin: 0 0 0 -540px;
+  width: 300px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
   background: #fff;
   padding: 50px 40px;
@@ -615,7 +543,7 @@
 }
 
 .Solution .box .tit {
-  font-size: 21px;
+  font-size: 25px;
   margin: 0 0 20px 0;
 }
 
@@ -656,9 +584,14 @@
   margin: 0 0 0 -600px;
 }
 
+.Solution .arrows i:last-child {
+  margin: 0 0 0 600px;
+}
+
 .Solution .dots {
   text-align: center;
   font-size: 0;
+  height: 30px;
 }
 
 .Solution .dots>li {
@@ -723,7 +656,6 @@
 }
 
 .Promotion .des li {
-
   cursor: pointer;
   width: 300px;
 }
@@ -782,7 +714,6 @@
   background: var(--mc);
   line-height: 35px;
 }
-
 
 .News .inner {
   display: flex;
@@ -866,6 +797,10 @@
   margin: 0 0 0 5px;
 }
 
+.Footer .ft_bottom {
+  padding: 30px 0;
+  line-height: 1.45;
+}
 
 .ServiceLink {
   display: flex;
